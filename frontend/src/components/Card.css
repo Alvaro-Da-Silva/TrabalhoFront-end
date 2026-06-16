@@ -1,0 +1,14 @@
+.cardConteiner{
+    display: flex;
+    background-color: #414141;
+    width: 80%;
+    height:30%;
+}
+
+.UserName{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    margin: 20px;
+}
