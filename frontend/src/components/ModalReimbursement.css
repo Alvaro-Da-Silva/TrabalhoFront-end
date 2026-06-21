@@ -1,0 +1,105 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  width: 450px;
+  color: #000;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+}
+
+.step-container {
+  min-height: 200px;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.radio-group-no-margin {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.details-container {
+  margin-top: 15px;
+}
+
+.details-label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.details-input {
+  width: 100%;
+  padding: 5px;
+}
+
+.value-text {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.summary-box {
+  margin-top: 15px;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 5px;
+  color: #333;
+}
+
+.summary-item {
+  margin: 5px 0;
+}
+
+.warning-box {
+  margin-top: 20px;
+  color: #d9534f;
+  background-color: #fdf7f7;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #d9534f;
+}
+
+.modal-actions {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+
+.btn-secondary {
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  padding: 8px 15px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.btn-primary:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}

@@ -1,15 +1,11 @@
-import './App.css'
-import CardUser from './components/CardUser'
-import CardTable from './components/CardTable'
+import "./App.css";
+
 
 function App() {
   return (
-    <div className='conteiner'>
-      <CardUser /> 
-      <CardTable />
+    <div className="conteiner">
     </div>
-
-  )
+  );
 }
 
-export default App
+export default App;
