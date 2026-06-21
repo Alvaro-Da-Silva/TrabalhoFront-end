@@ -95,7 +95,7 @@
       "nome": "Bruno Souza",
       "email": "bruno@email.com",
       "nivel": "vip",
-      "carteira_saldo": 300,
+      "carteira_saldo": 830,
       "senha": "1234"
     },
     {
@@ -117,7 +117,7 @@
       "status": "reembolsado",
       "valor_pago": 350,
       "tipo_estorno": "Saldo no sistema",
-      "motivo_reembolso": "Arrependimento"
+      "motivo_reembolso": "Atraso na entrega"
     },
     {
       "id": "102",
@@ -136,10 +136,10 @@
       "produtoId": "2",
       "quantidade": 1,
       "data": "2026-05-25",
-      "status": "pendente",
+      "status": "reembolsado",
       "valor_pago": 180,
-      "tipo_estorno": "",
-      "motivo_reembolso": ""
+      "tipo_estorno": "Saldo no sistema",
+      "motivo_reembolso": "Arrependimento"
     }
   ],
   "cupons": [

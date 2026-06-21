@@ -12,8 +12,7 @@ export default function Login() {
     e.preventDefault();
 
     if (!Datausers || !Array.isArray(Datausers)) {
-      console.log("Dados de usuários ainda não carregados.");
-      return;
+      return <p>Carregando...</p>
     }
 
     const usuarioEncontrado = Datausers.find(
