@@ -1,14 +1,82 @@
-.cardConteiner{
-    display: flex;
-    background-color: #414141;
-    width: 80%;
-    height:30%;
+.LogoutBtn {
+  font-size: 16px;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #b63131;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.UserName{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
-    margin: 20px;
+.dashboard {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 20px;
+  padding: 20px;
+  background: #f4f4f4;
+}
+
+.sidebar {
+  position: sticky;
+  top: 20px;
+  align-self: start;
+}
+
+.content {
+
+  text-align: center;
+  display: grid;
+  gap: 20px;
+  max-height: 100px;
+}
+
+.cardConteiner {
+  border: 10px solid #ccc;
+  border-radius: 30px;
+  padding: 20px;
+  text-align: left;
+  width: 100%;
+  display: grid;
+  gap: 10px;
+  background-color: #414141;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.order-card {
+  width:500px;
+  justify-content: center;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  display: grid;
+  gap: 10px;
+}
+
+.UserName {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  margin: 20px;
+}
+
+.order-card button {
+  font-size: 16px;
+  width: 100px;
+  padding: 10px;
+  background-color: #b63131;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.order-card button:hover,
+.reimbursement-button:hover {
+  background-color: #8f2525;
 }

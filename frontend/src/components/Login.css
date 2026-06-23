@@ -1,0 +1,52 @@
+h1{
+    margin:0;
+}
+
+.login-container{
+    display:flex;
+    height:100vh;
+    justify-content: center;
+    align-items:center;
+}
+
+.login-card{ 
+    justify-content:center;
+    flex-direction: column;
+    display:flex;
+    align-items:stretch;
+    padding:20px;
+    background:rgba(255,255,255,.95);
+    border-radius:18px;
+    box-shadow:00px 40px 100px rgba(0,0,0,.3);
+    gap:15px;
+}
+
+.login-title{
+    font-size: 24px;
+    color:#15146e;
+    text-align:center;
+}
+
+.buttonLogin{
+    font-size:16px;
+    width:100%;
+    padding:10px;
+    background-color:#31b631;
+    color:#fff;
+    border-radius:5px;
+    cursor:pointer;
+    border:0px;
+    
+}
+
+.inputTextBox{
+    width:100%;
+    padding: 10px;
+    border-radius:5px;
+}
+
+.input-group {
+    display:flex;
+    flex-direction:column;
+    gap:5px;  /*asd*/
+}

@@ -43,37 +43,47 @@ const CardUser = () => {
   };
 
   return (
-    <div>
-      <button onClick={handleLogout}>Logout</button>
-      {Datausers &&
-        Datausers.map((user) => (
-          <div key={user.id} className="cardConteiner">
-            <h1>{user.nome}</h1>
-            <p>Email: {user.email}</p>
-            <p>Nível: {user.nivel}</p>
-            <p>Carteira: {user.carteira_saldo}</p>
-          </div>
-        ))}
-      <div>
-        {Dataorders && Dataorders.map((order) => (
-          <div key={order.id}>
-            <h1>Data: {order.data}</h1>
-            <p>Valor: {order.valor_pago}R$</p>
-            <p>Status: {order.status}</p>
-
-            {order.status === "pendente" && (
-              <button onClick={() => {
-                setSelectedOrder(order);
-                setIsModalOpen(true);
-              }}>Solicitar Reembolso</button>
-            )}
-          </div>
-        ))}
+    <div className="dashboard">
+      <div className="sidebar">
+        {Datausers &&
+          Datausers.map((user) => (
+            <div key={user.id} className="cardConteiner">
+              <h1>{user.nome}</h1>
+              <p>Email: {user.email}</p>
+              <p>Nível: {user.nivel}</p>
+              <p>Carteira: R$ {user.carteira_saldo}</p>
+              <button className="LogoutBtn" onClick={handleLogout}>
+                Logout
+              </button>
+            </div>
+          ))}
       </div>
 
-      <ModalReimbursement 
-        isOpen={isModalOpen} 
-        onClose={() => setIsModalOpen(false)} 
+      <div className="content">
+        {Dataorders &&
+          Dataorders.map((order) => (
+            <div key={order.id} className="order-card">
+              <h2>{order.data}</h2>
+              <p>Valor: R$ {order.valor_pago}</p>
+              <p>Status: {order.status}</p>
+
+              {order.status === "pendente" && (
+                <button
+                  onClick={() => {
+                    setSelectedOrder(order);
+                    setIsModalOpen(true);
+                  }}
+                >
+                  Solicitar Reembolso
+                </button>
+              )}
+            </div>
+          ))}
+      </div>
+
+      <ModalReimbursement
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
         order={selectedOrder}
         onSuccess={() => {
           setIsModalOpen(false);
