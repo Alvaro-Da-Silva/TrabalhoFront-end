@@ -3,17 +3,19 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 
 import CardUser from "./components/CardUser";
-import Login from "./routes/login";
+import LoginComponent from "./components/Login";
+import Layout from "./components/Layout";
 
 import{ createBrowserRouter, RouterProvider} from 'react-router-dom'
+
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Login />,
+    element: <Layout><LoginComponent /></Layout>,
   },
   {
     path:"/Orders",
-    element: <CardUser />
+    element: <Layout><CardUser /></Layout>
   }
 ])
 

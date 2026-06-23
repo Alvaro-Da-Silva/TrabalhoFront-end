@@ -4,6 +4,38 @@ import { useFetchUser } from "../Hooks/useFetchUser";
 import { useFetchProducts } from "../Hooks/useFetchProducts";
 import "./ModalReimbursement.css";
 
+function ProgressIndicator({ currentStep, totalSteps }) {
+  return (
+    <div className="progress-container">
+      <div className="progress-steps">
+        {Array.from({ length: totalSteps }, (_, i) => (
+          <div
+            key={i}
+            className={`progress-step ${
+              i < currentStep
+                ? "completed"
+                : i === currentStep
+                  ? "active"
+                  : ""
+            }`}
+          >
+            <div className="step-indicator">
+              {i < currentStep ? "✓" : i + 1}
+            </div>
+            <span className="step-label">
+              {i === 0
+                ? "Motivo"
+                : i === 1
+                  ? "Tipo"
+                  : "Confirmação"}
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function ModalReimbursement({
   isOpen,
   onClose,
@@ -213,8 +245,14 @@ export default function ModalReimbursement({
   return (
     <div className="modal-overlay">
       <div className="modal-content">
+        <div className="modal-header">
+          <ProgressIndicator currentStep={currentStepIndex} totalSteps={3} />
+        </div>
+
         <form onSubmit={handleSubmit}>
-          <div className="step-container">{currentComponent}</div>
+          <div className="modal-body">
+            <div className="step-container">{currentComponent}</div>
+          </div>
 
           <div className="modal-actions">
             <button
@@ -229,7 +267,7 @@ export default function ModalReimbursement({
             </button>
             <button
               type="submit"
-              className="btn-primary"
+              className={`btn-primary ${isSubmitting ? "loading" : ""}`}
               disabled={isSubmitting}
             >
               {isSubmitting

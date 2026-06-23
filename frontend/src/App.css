@@ -1,7 +1,5 @@
-.conteiner{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-
+/* Global Container */
+.conteiner {
+  width: 100%;
+  min-height: 100vh;
 }
